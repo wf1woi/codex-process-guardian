@@ -9,6 +9,12 @@
 
 > 默认只监控和报告，不会自动结束进程。任何手动终止操作都需要明确确认。
 
+## 界面预览
+
+![Codex Process Guardian 进程关系与批量管理界面](docs/images/guardian-dashboard.jpg)
+
+主表用于快速比较风险、状态、PID、宿主关系和运行时间；选择一行后，下方详情区会展示完整进程关系与实时命令行。截图中的进程和数值仅为运行示例，会随系统环境变化。
+
 ## 下载
 
 前往 [Releases](https://github.com/wf1woi/codex-process-guardian/releases/latest) 下载：
