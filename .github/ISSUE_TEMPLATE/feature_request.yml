@@ -1,0 +1,22 @@
+name: Feature request
+description: 提议一个聚焦且可验证的改进
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: use-case
+    attributes:
+      label: 使用场景
+      description: 请说明当前遇到的问题，而不只是期望的实现方式。
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建议方案
+  - type: textarea
+    id: safety
+    attributes:
+      label: 安全与性能影响
+      description: 是否影响进程终止、隐私、扫描性能或内存占用？
+

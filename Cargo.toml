@@ -1,0 +1,36 @@
+[package]
+name = "codex-process-guardian"
+version = "2.0.0"
+edition = "2021"
+
+[dependencies]
+windows-sys = { version = "0.61.2", features = [
+    "Win32_Foundation",
+    "Win32_Graphics_Gdi",
+    "Win32_Security",
+    "Win32_Storage_FileSystem",
+    "Win32_System_Diagnostics_Debug",
+    "Win32_System_Diagnostics_ToolHelp",
+    "Win32_System_Environment",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Memory",
+    "Win32_System_Registry",
+    "Win32_System_Threading",
+    "Win32_UI_Controls",
+    "Win32_UI_WindowsAndMessaging"
+] }
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = "symbols"
+
+[[bin]]
+name = "guardian"
+path = "src/bin/guardian.rs"
+
+[[bin]]
+name = "guardian-cli"
+path = "src/bin/guardian_cli.rs"
